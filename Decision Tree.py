@@ -30,7 +30,8 @@ def splitDataset(dataset, index, value):
             reducedExample.extend(example[index+1:])
             subDataset.append(reducedExample)
     return subDataset
-    
+
+#ID3    
 def bestFeatures(dataset): #dataset is a list of lists, and contains labels
     numFeatures = len(dataset[0] - 1)
     baseEntropy = entropy(dataset)
@@ -57,9 +58,6 @@ def majorityVote(classList):
         classCount[vote] += 1
     sortedClassCount = sorted(classCount.iteritems(), key=operator.itemgetter(1),reverse=True)
     return sortedClassCount[0][0]
-  
-majorityVote(a)
-
   
 def decisionTree(dataset, labels):
     classList = [example[-1] for example in dataset]
