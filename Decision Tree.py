@@ -19,7 +19,7 @@ def entropy(dataset):
     entropy = 0
     for key in labelcounts:
         prob = labelcounts[key] / float(m)
-        entropy -= prob * np.log(prob, 2)
+        entropy -= prob * np.log(prob)
     return entropy
     
 def splitDataset(dataset, index, value):
